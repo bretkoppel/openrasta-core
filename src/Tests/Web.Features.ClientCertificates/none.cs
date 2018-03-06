@@ -13,6 +13,7 @@ using OpenRasta.IO;
 using OpenRasta.Web;
 using Xunit;
 
+    #if NETCOREAPP2_0
 namespace Tests.Web.Features.ClientCertificates
 {
   public class none
@@ -71,3 +72,4 @@ namespace Tests.Web.Features.ClientCertificates
     }
   }
 }
+#endif
