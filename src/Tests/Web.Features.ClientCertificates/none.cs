@@ -65,9 +65,7 @@ namespace Tests.Web.Features.ClientCertificates
 
     class Handler
     {
-      public void Get()
-      {
-      }
+      public OperationResult Get => new OperationResult.OK();
     }
   }
 }
