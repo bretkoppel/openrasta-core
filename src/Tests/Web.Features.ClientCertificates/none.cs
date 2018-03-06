@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Security;
@@ -26,11 +27,12 @@ namespace Tests.Web.Features.ClientCertificates
       
       var port = randomPort.Next(2048, 4096);
       var names = GetType().Assembly.GetManifestResourceNames();
+      
       var serverCert = new X509Certificate2(GetType().Assembly
-          .GetManifestResourceStream("Tests.Web.Features.ClientCertificates.keys.certificates.server.pfx").ReadToEnd(),
+          .GetManifestResourceStream(names.Single(n=>n.Contains("server.pfx"))).ReadToEnd(),
         "openrasta");
       var clientCert = new X509Certificate2(GetType().Assembly
-          .GetManifestResourceStream("Tests.Web.Features.ClientCertificates.keys.certificates.client.pfx").ReadToEnd(),
+          .GetManifestResourceStream(names.Single(n=>n.Contains("client.pfx"))).ReadToEnd(),
         "openrasta");
 
 
