@@ -23,8 +23,8 @@ namespace Tests.Web.Features.ClientCertificates
     [Fact]
     public async Task doItAll()
     {
-      if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) == false)
-        return;
+      //if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows) == false)
+        //return;
       
       var port = randomPort.Next(2048, 4096);
       var names = GetType().Assembly.GetManifestResourceNames();

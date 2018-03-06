@@ -8,7 +8,6 @@ using Xunit;
 
 namespace Tests.Hosting.Owin
 {
-  #if NETCOREAPP2_0
   public class hosting_on_kestrel : IDisposable
   {
     
@@ -59,5 +58,4 @@ namespace Tests.Hosting.Owin
       server?.Dispose();
     }
   }
-  #endif
 }

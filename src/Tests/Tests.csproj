@@ -4,6 +4,14 @@
     <TargetFrameworks>netcoreapp2.0;net461</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Web.Features.ClientCertificates\keys\certificates\server.pfx" />
+    <None Remove="Web.Features.ClientCertificates\keys\certificates\client.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Web.Features.ClientCertificates\keys\certificates\client.pfx" />
+    <EmbeddedResource Include="Web.Features.ClientCertificates\keys\certificates\server.pfx" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\OpenRasta.Plugins.Diagnostics\OpenRasta.Plugins.Diagnostics.csproj" />
     <ProjectReference Include="..\OpenRasta.Plugins.ReverseProxy\OpenRasta.Plugins.ReverseProxy.csproj" />
     <ProjectReference Include="..\OpenRasta.Hosting.AspNetCore\OpenRasta.Hosting.AspNetCore.csproj" />
@@ -25,8 +33,5 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Web.Features" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Web.Features.ClientCertificates\keys\certificates\*.pfx" />
   </ItemGroup>
 </Project>
