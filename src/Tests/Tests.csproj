@@ -27,6 +27,6 @@
     <Folder Include="Web.Features" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Update="Web.Features.ClientCertificates/keys/certificates/*.pfx" />
+    <EmbeddedResource Include="Web.Features.ClientCertificates\keys\certificates\*.pfx" />
   </ItemGroup>
 </Project>
